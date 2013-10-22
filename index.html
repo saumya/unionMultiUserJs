@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Union Chat for JavaScript</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="js/jquerymobile/jquery.mobile-1.4.0-beta.1.css">
+		<script src="js/jquerymobile/jquery-2.0.3.js"></script> 
+		<script type="text/javascript" src="js/jquerymobile/jquery.mobile-1.4.0-beta.1.js"></script>
+
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!--Load the Orbiter JavaScript library (non-minified version). Use during development.-->
+		<!-- <script type="text/javascript" src="http://cdn.unioncloud.io/Orbiter_latest.js"></script> -->
+		<!--Load the Orbiter JavaScript library (minified version). Use for production.-->
+		<!--<script type="text/javascript" src="http://cdn.unioncloud.io/Orbiter_latest_min.js"></script>-->
+
+		<script type="text/javascript" src="js/Orbiter_2.1.0.843_Release.js"></script>
+		<!-- chat code -->
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/userAction.js"></script>
+
+		<!-- iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- safari UI -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" /> <!-- status bar -->
+	</head>
+
+	<body>
+
+	<div data-role="page" data-theme="a" id="page_1">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(2);">Next</a>
+		</div>
+		<div data-role="content">
+			1
+			
+			<!--
+			<div id="chatPane"></div>
+			
+			<div>
+			  <input type="text" id="outgoing" onkeydown="if (event.keyCode == 13) sendMessage()"/>
+			  <input type="submit" value="Send" onclick="sendMessage()"/>
+			</div>
+			-->
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_1"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(1);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+	<div data-role="page" data-theme="a" id="page_2">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(1,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(3);">Next</a>
+		</div>
+		<div data-role="content">
+			2
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_2"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(2);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_3">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(2,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(4);">Next</a>
+		</div>
+		<div data-role="content">
+			3
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_3"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(3);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_4">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(3,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(5);">Next</a>
+		</div>
+		<div data-role="content">
+			4
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_4"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(4);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_5">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(4,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(6);">Next</a>
+		</div>
+		<div data-role="content">
+			5
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_5"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(5);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_6">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(5,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(7);">Next</a>
+		</div>
+		<div data-role="content">
+			6
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_6"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(6);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+	
+	<div data-role="page" data-theme="a" id="page_7">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(6,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(8);">Next</a>
+		</div>
+		<div data-role="content">
+			7
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_7"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(7);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_8">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(7,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(9);">Next</a>
+		</div>
+		<div data-role="content">
+			8
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_8"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(8);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_9">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(8,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(10);">Next</a>
+		</div>
+		<div data-role="content">
+			9
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_9"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(9);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_10">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(9,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(11);">Next</a>
+		</div>
+		<div data-role="content">
+			10
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_10"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(10);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_11">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(10,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(12);">Next</a>
+		</div>
+		<div data-role="content">
+			11
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_11"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(11);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_12">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(11,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(13);">Next</a>
+		</div>
+		<div data-role="content">
+			12
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_12"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(12);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_13">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(12,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(14);">Next</a>
+		</div>
+		<div data-role="content">
+			13
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_13"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(13);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_14">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(13,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(15);">Next</a>
+		</div>
+		<div data-role="content">
+			14
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_14"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(14);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_15">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(14,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(16);">Next</a>
+		</div>
+		<div data-role="content">
+			15
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_15"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(15);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_16">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(15,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(17);">Next</a>
+		</div>
+		<div data-role="content">
+			16
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_16"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(16);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_17">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(16,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(18);">Next</a>
+		</div>
+		<div data-role="content">
+			17
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_17"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(17);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_18">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(17,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(19);">Next</a>
+		</div>
+		<div data-role="content">
+			18
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_18"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(18);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_19">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(18,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(20);">Next</a>
+		</div>
+		<div data-role="content">
+			19
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_19"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(19);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_20">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(19,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(21);">Next</a>
+		</div>
+		<div data-role="content">
+			20
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_20"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(20);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_21">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(20,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(22);">Next</a>
+		</div>
+		<div data-role="content">
+			21
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_21"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(21);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_22">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(21,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(23);">Next</a>
+		</div>
+		<div data-role="content">
+			22
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_22"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(22);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_23">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(22,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(24);">Next</a>
+		</div>
+		<div data-role="content">
+			23
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_23"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(23);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_24">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(23,true);">Back</a>
+			<h1>iOS</h1>
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(25);">Next</a>
+		</div>
+		<div data-role="content">
+			24
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_24"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(24);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+	<div data-role="page" data-theme="a" id="page_25">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(24,true);">Back</a>
+			<h1>iOS</h1>
+		</div>
+		<div data-role="content">
+			24
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div class="typePane">
+				<input type="text" class="outgoing_25"/>
+				<a href="#" data-role="button" class="ui-btn-right" onclick="sendChatMessage(25);">Send</a>
+			</div>
+			<div class="msgPane"></div>
+			<div class="chatPane"></div>
+		</div>
+	</div>
+
+
+	</body>
+</html>

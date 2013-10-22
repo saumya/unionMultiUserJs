@@ -1,0 +1,20 @@
+#chatPane {
+	border: inset 2px; 
+	height: 100px; 
+	
+	overflow: auto; 
+	padding: 5px; 
+	margin-bottom: 5px
+}
+.chatPane{
+	font-size: 12px;
+	color: #A61D00;
+}
+.msgPane{
+	width: 100%;
+	min-height: 20px;
+	color: #FFB640;
+}
+.typePane{
+	width: 80%;
+}
