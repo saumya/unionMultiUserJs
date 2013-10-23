@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Union Chat for JavaScript</title>
+		<title>Mobile Applications 101</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" type="text/css" href="js/jquerymobile/jquery.mobile-1.4.0-beta.1.css">
@@ -27,13 +27,14 @@
 
 	<body>
 
-	<div data-role="page" data-theme="a" id="page_1">
+	<div data-role="page" data-theme="b" id="page_1">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(2);">Next</a>
 		</div>
 		<div data-role="content">
-			1
+			<p class="g_text">introduction</p>
+			
 			
 			<!--
 			<div id="chatPane"></div>
@@ -53,14 +54,17 @@
 			<div class="chatPane"></div>
 		</div>
 	</div>
-	<div data-role="page" data-theme="a" id="page_2">
+	<div data-role="page" data-theme="b" id="page_2">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(1,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(3);">Next</a>
 		</div>
 		<div data-role="content">
-			2
+			<p class="g_text">
+				Apple’s mobile Operating System. <br/>
+				iOS is the foundation of iPhone, iPad, and iPod touch.
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -72,14 +76,22 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_3">
+	<div data-role="page" data-theme="b" id="page_3">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(2,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(4);">Next</a>
 		</div>
 		<div data-role="content">
-			3
+			<p class="g_text">
+				Application Layer
+				<ul>
+				    <li class="g_text">Core OS</li>
+				    <li class="g_text">Core Services</li>
+				    <li class="g_text">Media</li>
+				    <li class="g_text">Cocoa / Cocoa Touch</li>
+				</ul>
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -91,14 +103,18 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_4">
+	<div data-role="page" data-theme="b" id="page_4">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(3,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(5);">Next</a>
 		</div>
 		<div data-role="content">
-			4
+			<p class="g_text">
+				What is Cocoa ? <br><br>
+				<img class="imgX" src="https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/OSX_Technology_Overview/art/osx_architecture-cocoa_2x.png" />
+			</p>
+			<span class="credits">Image credits : https://developer.apple.com</span>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -110,14 +126,18 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_5">
+	<div data-role="page" data-theme="b" id="page_5">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(4,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(6);">Next</a>
 		</div>
 		<div data-role="content">
-			5
+			<p class="g_text">
+				What is Cocoa Touch ? <br><br>
+				<img class="imgX" src="css/iOSLayer.jpg">
+			</p>
+			<span class="credits">Image credits : https://developer.apple.com</span>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -129,14 +149,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_6">
+	<div data-role="page" data-theme="b" id="page_6">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(5,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(7);">Next</a>
 		</div>
 		<div data-role="content">
-			6
+			<p class="g_text">
+				Cocoa and Cocoa Touch are Application Frameworks written in ObjectiveC.
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -148,14 +170,16 @@
 		</div>
 	</div>
 	
-	<div data-role="page" data-theme="a" id="page_7">
+	<div data-role="page" data-theme="b" id="page_7">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(6,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(8);">Next</a>
 		</div>
 		<div data-role="content">
-			7
+			<p class="g_text">
+				What is ObjectiveC ?
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -167,14 +191,18 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_8">
+	<div data-role="page" data-theme="b" id="page_8">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(7,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(9);">Next</a>
 		</div>
 		<div data-role="content">
-			8
+			<p class="g_text">
+				What is ObjectiveC ? ( ObjC ) <br><br>
+				Object Oriented implementation of C. <br>
+				Ex : C++ , C#
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -186,14 +214,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_9">
+	<div data-role="page" data-theme="b" id="page_9">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(8,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(10);">Next</a>
 		</div>
 		<div data-role="content">
-			9
+			<p class="g_text">
+				Questions ?
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -205,14 +235,17 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_10">
+	<div data-role="page" data-theme="b" id="page_10">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(9,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(11);">Next</a>
 		</div>
 		<div data-role="content">
-			10
+			<p class="g_text">
+				A little technical details, before moving on.<br><br>
+				May be too technical for the time being, but be with it, we will cover it up.
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -224,14 +257,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_11">
+	<div data-role="page" data-theme="b" id="page_11">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(10,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(12);">Next</a>
 		</div>
 		<div data-role="content">
-			11
+			<p class="g_text">
+				A note for developers coming from other Object Oriented programming background.
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -243,14 +278,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_12">
+	<div data-role="page" data-theme="b" id="page_12">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(11,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(13);">Next</a>
 		</div>
 		<div data-role="content">
-			12
+			<p class="g_text">
+				Garbage collection is not available to applications running on iOS.
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -262,14 +299,17 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_13">
+	<div data-role="page" data-theme="b" id="page_13">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(12,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(14);">Next</a>
 		</div>
 		<div data-role="content">
-			13
+			<p class="g_text">
+				Garbage collection is not available to applications running in iOS. <br><br>
+				The closest is Automatic Reference Counting. (ARC)
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -281,14 +321,17 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_14">
+	<div data-role="page" data-theme="b" id="page_14">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(13,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(15);">Next</a>
 		</div>
 		<div data-role="content">
-			14
+			<p class="g_text">
+				What is ARC ? <br><br>
+				Its the act of counting the references of the objects automatically. Once reference count becomes 0, iOS will automatically remove that object from memory.
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -300,14 +343,18 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_15">
+	<div data-role="page" data-theme="b" id="page_15">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(14,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(16);">Next</a>
 		</div>
 		<div data-role="content">
-			15
+			<p class="g_text">
+				What is ARC ? <br>
+				<img class="imgX" src="css/d.jpg" />
+			</p>
+			<span class="credits">Image credits : http://scottjallen.com/wifi-donkeys/</span>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -319,14 +366,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_16">
+	<div data-role="page" data-theme="b" id="page_16">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(15,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(17);">Next</a>
 		</div>
 		<div data-role="content">
-			16
+			<p class="g_text">
+				Introduction to development environment.
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -338,14 +387,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_17">
+	<div data-role="page" data-theme="b" id="page_17">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(16,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(18);">Next</a>
 		</div>
 		<div data-role="content">
-			17
+			<p class="g_text">
+				The IDE used to develop iOS applications is called XCode.
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -357,14 +408,22 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_18">
+	<div data-role="page" data-theme="b" id="page_18">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(17,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(19);">Next</a>
 		</div>
 		<div data-role="content">
-			18
+			<p class="g_text">
+				XCode has
+				<ul>
+					<li class="g_text">An IDE</li>
+					<li class="g_text">The SDK</li>
+					<li class="g_text">A simulator</li>
+					<li class="g_text">Utility for submitting to Appstore</li>
+				</ul>
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -376,14 +435,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_19">
+	<div data-role="page" data-theme="b" id="page_19">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(18,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(20);">Next</a>
 		</div>
 		<div data-role="content">
-			19
+			<p class="g_text">
+				Demo.
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -395,14 +456,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_20">
+	<div data-role="page" data-theme="b" id="page_20">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(19,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(21);">Next</a>
 		</div>
 		<div data-role="content">
-			20
+			<p class="g_text">
+				Xcode, Interface Builder and Storyboard <br> ( The complete toolchain for designing, developing and distributing for iOS )
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -414,14 +477,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_21">
+	<div data-role="page" data-theme="b" id="page_21">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(20,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(22);">Next</a>
 		</div>
 		<div data-role="content">
-			21
+			<p class="g_text">
+				Demo
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -433,14 +498,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_22">
+	<div data-role="page" data-theme="b" id="page_22">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(21,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(23);">Next</a>
 		</div>
 		<div data-role="content">
-			22
+			<p class="g_text">
+				Appstore introduction
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -452,14 +519,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_23">
+	<div data-role="page" data-theme="b" id="page_23">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(22,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(24);">Next</a>
 		</div>
 		<div data-role="content">
-			23
+			<p class="g_text">
+				Demo
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -471,14 +540,16 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_24">
+	<div data-role="page" data-theme="b" id="page_24">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(23,true);">Back</a>
 			<h1>iOS</h1>
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-right" onclick="onUserNavigate(25);">Next</a>
 		</div>
 		<div data-role="content">
-			24
+			<p class="g_text">
+				Thanks
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
@@ -490,13 +561,15 @@
 		</div>
 	</div>
 
-	<div data-role="page" data-theme="a" id="page_25">
+	<div data-role="page" data-theme="b" id="page_25">
 		<div data-role="header" data-position="fixed" data-theme="b">
 			<a href="#" data-role="button" data-inline="true" class="ui-btn-left" onclick="onUserNavigate(24,true);">Back</a>
 			<h1>iOS</h1>
 		</div>
 		<div data-role="content">
-			24
+			<p class="g_text">
+				Questions ?
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div class="typePane">
